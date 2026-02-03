@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - TechShop</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="menu-toggle sidebar-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <a href="index.html">Tech<span>Shop</span></a>
+                </div>
+            </div>
+
+            <div class="nav-center">
+                <div class="search-box">
+                    <button class="btn-search"><i class="fas fa-search"></i></button>
+                    <input type="text" id="search-input" placeholder="Buscar productos...">
+                    <button class="filter-toggle" aria-label="Filtros"><i class="fas fa-filter"></i></button>
+                </div>
+                    <div class="filter-panel" role="dialog" aria-hidden="true">
+                        <div class="filter-row">
+                            <label for="filter-category">Categoría</label>
+                            <select id="filter-category">
+                                <option value="all">Todas</option>
+                                <option value="laptops">Laptops</option>
+                                <option value="smartphones">Smartphones</option>
+                                <option value="audio">Audio</option>
+                                <option value="accesories">Accesorios</option>
+                            </select>
+                        </div>
+                        <div class="filter-row">
+                            <label for="filter-price">Precio máximo</label>
+                            <select id="filter-price">
+                                <option value="all">Cualquier precio</option>
+                                <option value="500">Hasta $500</option>
+                                <option value="1000">Hasta $1,000</option>
+                                <option value="2000">Hasta $2,000</option>
+                            </select>
+                        </div>
+                        <div class="filter-row">
+                            <label for="filter-sort">Ordenar</label>
+                            <select id="filter-sort">
+                                <option value="popular">Más populares</option>
+                                <option value="price-low">Precio: menor a mayor</option>
+                                <option value="price-high">Precio: mayor a menor</option>
+                                <option value="newest">Más recientes</option>
+                            </select>
+                        </div>
+                        <div class="filter-row" style="justify-content:flex-end;">
+                            <button class="page-btn apply-filters">Aplicar</button>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="nav-right">
+                <a class="btn-cart" ><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                <a class="btn-user" href="login.html"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Inicio</a>
+            <span>/</span>
+            <span class="current">Iniciar Sesión</span>
+        </div>
+    </div>
+
+    <!-- Página de inicio de sesión -->
+    <section class="auth-page">
+        <div class="container">
+            <div class="auth-container">
+                <!-- Formulario de login -->
+                <div class="auth-form login-form">
+                    <h2>Iniciar Sesión</h2>
+                    <p class="auth-subtitle">Ingresa a tu cuenta para continuar</p>
+                    
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" placeholder="tu@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="login-password">Contraseña</label>
+                            <div class="password-input">
+                                <input type="password" id="login-password" placeholder="Tu contraseña" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox" id="remember-me">
+                                <span class="checkmark"></span>
+                                Recordar mis datos
+                            </label>
+                            <a href="forgot-password.html" class="forgot-password">
+                                ¿Olvidaste tu contraseña?
+                            </a>
+                        </div>
+                        
+                        <button type="submit" class="btn-auth">Iniciar Sesión</button>
+                        
+                        <div class="auth-divider">
+                            <span>o continuar con</span>
+                        </div>
+                        
+                        <div class="social-auth">
+                            <button type="button" class="btn-social google">
+                                <i class="fab fa-google"></i> Google
+                            </button>
+                            <button type="button" class="btn-social facebook">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Registro -->
+                <div class="auth-info">
+                    <h2>¿No tienes una cuenta?</h2>
+                    <p>Crea una cuenta para disfrutar de:</p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> Seguimiento de pedidos</li>
+                        <li><i class="fas fa-check"></i> Historial de compras</li>
+                        <li><i class="fas fa-check"></i> Descuentos exclusivos</li>
+                        <li><i class="fas fa-check"></i> Lista de deseos</li>
+                        <li><i class="fas fa-check"></i> Pago más rápido</li>
+                    </ul>
+                    <a href="signup.html" class="btn-register">Crear Cuenta</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TechShop</h3>
+                    <p>Tu tienda de tecnología de confianza desde 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Catálogo</h4>
+                    <ul>
+                        <li><a href="../catalogo/categoria.html?cat=laptops">Laptops</a></li>
+                        <li><a href="../catalogo/categoria.html?cat=smartphones">Smartphones</a></li>
+                        <li><a href="../catalogo/categoria.html?cat=tablets">Tablets</a></li>
+                        <li><a href="../catalogo/categoria.html?cat=accesorios">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="../ayuda/index.html">Centro de ayuda</a></li>
+                        <li><a href="../ayuda/preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+                        <li><a href="../informacion/contacto.html">Contacto comercial</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="../informacion/acerca-de.html">Acerca de</a></li>
+                        <li><a href="../informacion/quienes-somos.html">Quiénes somos</a></li>
+                        <li><a href="#">Políticas de envío</a></li>
+                        <li><a href="#">Garantías</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechShop. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

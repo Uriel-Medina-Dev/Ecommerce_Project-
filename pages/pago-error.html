@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error en el pago - TechShop</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/error.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="menu-toggle sidebar-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <a href="../index.html">Tech<span>Shop</span></a>
+                </div>
+            </div>
+
+            <div class="nav-center" style="position:relative;">
+                <div class="search-box">
+                    <button class="btn-search"><i class="fas fa-search"></i></button>
+                    <input type="text" id="search-input" placeholder="Buscar productos...">
+                    <button class="filter-toggle" aria-label="Filtros"><i class="fas fa-filter"></i></button>
+                </div>
+
+                <div class="filter-panel" role="dialog" aria-hidden="true">
+                    <div class="filter-row">
+                        <label for="filter-category">Categoría</label>
+                        <select id="filter-category">
+                            <option value="all">Todas</option>
+                            <option value="laptops">Laptops</option>
+                            <option value="smartphones">Smartphones</option>
+                            <option value="audio">Audio</option>
+                            <option value="accesories">Accesorios</option>
+                        </select>
+                    </div>
+                    <div class="filter-row">
+                        <label for="filter-price">Precio máximo</label>
+                        <select id="filter-price">
+                            <option value="all">Cualquier precio</option>
+                            <option value="500">Hasta $500</option>
+                            <option value="1000">Hasta $1,000</option>
+                            <option value="2000">Hasta $2,000</option>
+                        </select>
+                    </div>
+                    <div class="filter-row">
+                        <label for="filter-sort">Ordenar</label>
+                        <select id="filter-sort">
+                            <option value="popular">Más populares</option>
+                            <option value="price-low">Precio: menor a mayor</option>
+                            <option value="price-high">Precio: mayor a menor</option>
+                            <option value="newest">Más recientes</option>
+                        </select>
+                    </div>
+                    <div class="filter-row" style="justify-content:flex-end;">
+                        <button class="page-btn apply-filters">Aplicar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <a class="btn-cart"><i class="fas fa-shopping-cart"></i></a>
+                <a class="btn-user" href="../html/login.html"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <nav class="nav-links">
+            <a href="../index.html" class="nav-link">Inicio</a>
+            <a href="../html/productos.html" class="nav-link">Productos</a>
+            <a href="../html/sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+            <a href="../html/ayuda.html" class="nav-link">Ayuda</a>
+            <a href="../html/contacto.html" class="nav-link">Contacto</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="../html/login.html" class="nav-action-link">Iniciar sesión</a>
+            <a href="../html/signup.html" class="nav-action-link">Registrarse</a>
+        </div>
+    </aside>
+
+    <div id="overlaySidebar" class="overlay-sidebar"></div>
+
+    <!-- Breadcrumb -->
+    <nav id="breadcrumb" class="breadcrumb" aria-label="breadcrumb"></nav>
+
+    <!-- Error de pago -->
+    <section class="error-page payment-error">
+        <div class="container">
+            <div class="error-content">
+                <div class="error-icon">
+                    <i class="fas fa-times-circle"></i>
+                </div>
+                
+                <h1>Error en el pago</h1>
+                <p class="error-message">
+                    Hubo un problema al procesar tu pago. Tu pedido no ha sido completado.
+                </p>
+                
+                <div class="error-details">
+                    <h3>Posibles causas:</h3>
+                    <ul>
+                        <li>Saldo insuficiente en tu tarjeta</li>
+                        <li>Datos de la tarjeta incorrectos</li>
+                        <li>Problemas temporales con el procesador de pagos</li>
+                        <li>Límite de la tarjeta excedido</li>
+                        <li>La transacción fue rechazada por tu banco</li>
+                    </ul>
+                </div>
+                
+                <div class="error-actions">
+                    <button class="btn-error-home" onclick="retryPayment()">
+                        <i class="fas fa-redo"></i> Reintentar pago
+                    </button>
+                    <a href="../html/productos.html" class="btn-error-catalog">
+                        <i class="fas fa-shopping-cart"></i> Volver al catálogo
+                    </a>
+                    <a href="../html/ayuda.html" class="btn-error-back">
+                        <i class="fas fa-question-circle"></i> Obtener ayuda
+                    </a>
+                </div>
+                
+                <div class="payment-tips">
+                    <h3>Consejos para completar el pago:</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <h4>Verifica los datos</h4>
+                            <p>Asegúrate de que los datos de tu tarjeta sean correctos</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>Contacta a tu banco</h4>
+                            <p>Algunas transacciones requieren autorización del banco</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <h4>Prueba otro método</h4>
+                            <p>Intenta con otra tarjeta o método de pago</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-support">
+                    <h3>¿Necesitas ayuda?</h3>
+                    <p>Ponte en contacto con nuestro equipo de soporte:</p>
+                    <div class="support-options">
+                        <a href="mailto:soporte@techshop.com" class="support-option">
+                            <i class="fas fa-envelope"></i>
+                            soporte@techshop.com
+                        </a>
+                        <a href="tel:+526954569631" class="support-option">
+                            <i class="fas fa-phone"></i>
+                            +52 695-456-9631
+                        </a>
+                        <a href="../ayuda/index.html" class="support-option">
+                            <i class="fas fa-comments"></i>
+                            Chat en vivo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TechShop</h3>
+                    <p>Tu tienda de tecnología de confianza desde 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Catálogo</h4>
+                    <ul>
+                        <li><a href="../html/productos.html">Laptops</a></li>
+                        <li><a href="../html/productos.html">Smartphones</a></li>
+                        <li><a href="../html/productos.html">Audio</a></li>
+                        <li><a href="../html/productos.html">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="../html/ayuda.html">Centro de ayuda</a></li>
+                        <li><a href="../html/ayuda.html">Preguntas frecuentes</a></li>
+                        <li><a href="../html/contacto.html">Contacto comercial</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="../html/sobre-nosotros.html">Acerca de</a></li>
+                        <li><a href="../html/sobre-nosotros.html">Quiénes somos</a></li>
+                        <li><a href="#">Políticas de envío</a></li>
+                        <li><a href="#">Garantías</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechShop. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        function retryPayment() {
+            // Simular reintento de pago
+            alert('Redirigiendo para reintentar el pago...');
+            // En producción, redirigiría a la página de pago
+            window.location.href = '../carrito/products.html';
+        }
+    </script>
+</body>
+</html>

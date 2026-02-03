@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop - Contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra superior con botón hamburguesa -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="menu-toggle sidebar-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <a href="index.html">Tech<span>Shop</span></a>
+                </div>
+            </div>
+
+            <div class="nav-center" style="position:relative;">
+                <div class="search-box">
+                    <button class="btn-search"><i class="fas fa-search"></i></button>
+                    <input type="text" id="search-input" placeholder="Buscar productos...">
+                    <button class="filter-toggle" aria-label="Filtros"><i class="fas fa-filter"></i></button>
+                </div>
+
+                <div class="filter-panel" role="dialog" aria-hidden="true">
+                    <div class="filter-row">
+                        <label for="filter-category">Categoría</label>
+                        <select id="filter-category">
+                            <option value="all">Todas</option>
+                            <option value="laptops">Laptops</option>
+                            <option value="smartphones">Smartphones</option>
+                            <option value="audio">Audio</option>
+                            <option value="accesories">Accesorios</option>
+                        </select>
+                    </div>
+                    <div class="filter-row">
+                        <label for="filter-price">Precio máximo</label>
+                        <select id="filter-price">
+                            <option value="all">Cualquier precio</option>
+                            <option value="500">Hasta $500</option>
+                            <option value="1000">Hasta $1,000</option>
+                            <option value="2000">Hasta $2,000</option>
+                        </select>
+                    </div>
+                    <div class="filter-row">
+                        <label for="filter-sort">Ordenar</label>
+                        <select id="filter-sort">
+                            <option value="popular">Más populares</option>
+                            <option value="price-low">Precio: menor a mayor</option>
+                            <option value="price-high">Precio: mayor a menor</option>
+                            <option value="newest">Más recientes</option>
+                        </select>
+                    </div>
+                    <div class="filter-row" style="justify-content:flex-end;">
+                        <button class="page-btn apply-filters">Aplicar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <a class="btn-cart" href="productos.html"><i class="fas fa-shopping-cart"></i></a>
+                <a class="btn-user" href="login.html"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+    <nav id="breadcrumb" class="breadcrumb" aria-label="breadcrumb"></nav>
+
+    <!-- Sidebar (barra lateral) -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-top">
+            <div class="logo">
+                <a href="index.html">Tech<span>Shop</span></a>
+            </div>
+            <button class="close-sidebar" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a class="btn-search" href="#"><i class="fas fa-search"></i></a>
+            <a class="btn-cart" href="productos.html"><i class="fas fa-shopping-cart"></i></a>
+            <a class="btn-user" href="login.html"><i class="fas fa-user"></i></a>
+        </div>
+    </aside>
+
+    <div class="overlay-sidebar" id="overlaySidebar" tabindex="-1"></div>
+
+    <!-- Contacto -->
+    <section class="contact-page">
+        <div class="container">
+            <h1 class="page-title">Contáctanos</h1>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Dirección</h3>
+                        <p>Av. Tecnología 123,<br>Ciudad de México,<br>México</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Teléfono</h3>
+                        <p>+52 695-456-9631<br>Lun - Vie: 9:00 - 19:00</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>soporte@gmail.com<br>Respuesta las 24 horas</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Horarios</h3>
+                        <p>Lunes a Viernes: 9am - 7pm<br>Sábados: 10am - 2pm<br>Domingos: Cerrado</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Envíanos un mensaje</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre completo *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto *</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="map-section">
+                <h2>Encuéntranos</h2>
+                <div class="map-placeholder">
+                    <i class="fas fa-map"></i>
+                    <p>Mapa interactivo de nuestra ubicación</p>
+                    <small>(Mapa simulado - En producción integrarías Google Maps)</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (mismo que index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TechShop</h3>
+                    <p>Tecnología accesible para todos. Los mejores productos a los mejores precios desde 2020.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="ayuda.html">Ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> soporte@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +52 695-456-9631</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechShop. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

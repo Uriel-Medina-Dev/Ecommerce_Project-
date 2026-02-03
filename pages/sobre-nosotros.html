@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop - Sobre Nosotros</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra superior con botón hamburguesa -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="menu-toggle sidebar-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <a href="index.html">Tech<span>Shop</span></a>
+                </div>
+            </div>
+
+            <div class="nav-center" style="position:relative;">
+                <div class="search-box">
+                    <button class="btn-search"><i class="fas fa-search"></i></button>
+                    <input type="text" id="search-input" placeholder="Buscar productos...">
+                    <button class="filter-toggle" aria-label="Filtros"><i class="fas fa-filter"></i></button>
+                </div>
+
+                <div class="filter-panel" role="dialog" aria-hidden="true">
+                    <div class="filter-row">
+                        <label for="filter-category">Categoría</label>
+                        <select id="filter-category">
+                            <option value="all">Todas</option>
+                            <option value="laptops">Laptops</option>
+                            <option value="smartphones">Smartphones</option>
+                            <option value="audio">Audio</option>
+                            <option value="accesories">Accesorios</option>
+                        </select>
+                    </div>
+                    <div class="filter-row">
+                        <label for="filter-price">Precio máximo</label>
+                        <select id="filter-price">
+                            <option value="all">Cualquier precio</option>
+                            <option value="500">Hasta $500</option>
+                            <option value="1000">Hasta $1,000</option>
+                            <option value="2000">Hasta $2,000</option>
+                        </select>
+                    </div>
+                    <div class="filter-row">
+                        <label for="filter-sort">Ordenar</label>
+                        <select id="filter-sort">
+                            <option value="popular">Más populares</option>
+                            <option value="price-low">Precio: menor a mayor</option>
+                            <option value="price-high">Precio: mayor a menor</option>
+                            <option value="newest">Más recientes</option>
+                        </select>
+                    </div>
+                    <div class="filter-row" style="justify-content:flex-end;">
+                        <button class="page-btn apply-filters">Aplicar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <a class="btn-cart" href="productos.html"><i class="fas fa-shopping-cart"></i></a>
+                <a class="btn-user" href="login.html"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+    <nav id="breadcrumb" class="breadcrumb" aria-label="breadcrumb"></nav>
+
+    <!-- Sidebar (barra lateral) -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-top">
+            <div class="logo">
+                <a href="index.html">Tech<span>Shop</span></a>
+            </div>
+            <button class="close-sidebar" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="sobre-nosotros.html" class="active">Sobre Nosotros</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a class="btn-search" href="#"><i class="fas fa-search"></i></a>
+            <a class="btn-cart" href="productos.html"><i class="fas fa-shopping-cart"></i></a>
+            <a class="btn-user" href="login.html"><i class="fas fa-user"></i></a>
+        </div>
+    </aside>
+
+    <div class="overlay-sidebar" id="overlaySidebar" tabindex="-1"></div>
+
+    <!-- Sobre Nosotros -->
+    <section class="about-us">
+        <div class="container">
+            <h1 class="page-title">Sobre Nosotros</h1>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Nuestra Historia</h2>
+                    <p>TechShop nació en el 2020 tras la necesidad de realizar compras por medio de internet. Lo que comenzó como una pequeña tienda online se ha convertido en un referente en el que puedes confiar al realizar tus compras tecnológicas.</p>
+                    <p>Creemos que la tecnología debe de ser accesible para el público en general, y trabajamos incansablemente para ofrecerte los mejores productos a los mejores precios, con la calidad y servicio que mereces.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nuestra tienda">
+                </div>
+            </div>
+
+            <!-- Estadísticas -->
+            <!-- En index.html, reemplazar la sección stats actual: -->
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">4.5</div>
+                <div class="stat-label">Calificación</div>
+                <p class="content-level-3">Basada en 2,500+ reseñas</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Clientes satisfechos</div>
+                <p class="content-level-3">En toda Latinoamérica</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Productos</div>
+                <p class="content-level-3">Tecnología de última generación</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Soporte</div>
+                <p class="content-level-3">Chat, email y teléfono</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Añadir después del footer (antes del script): -->
+<div class="trust-badges">
+    <div class="container">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Compra 100% segura</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-truck"></i>
+                <span>Envío a todo México</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-undo"></i>
+                <span>30 días de devolución</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-credit-card"></i>
+                <span>Hasta 12 MSI</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- Misión y Visión -->
+            <div class="mission-vision">
+                <div class="mission">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Misión</h3>
+                    <p>Proporcionar tecnología de calidad que mejore la vida de las personas, ofreciendo una experiencia de compra excepcional con productos innovadores a precios competitivos.</p>
+                </div>
+                <div class="vision">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Visión</h3>
+                    <p>Ser la plataforma líder de comercio electrónico tecnológico en Latinoamérica, reconocida por la confiabilidad, innovación y excelencia en el servicio al cliente.</p>
+                </div>
+            </div>
+
+            <!-- Valores -->
+            <div class="values">
+                <h2>Nuestros Valores</h2>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Confianza</h4>
+                        <p>Construimos relaciones duraderas basadas en la transparencia y honestidad.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Innovación</h4>
+                        <p>Buscamos constantemente nuevas formas de mejorar tu experiencia.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-users"></i>
+                        <h4>Comunidad</h4>
+                        <p>Creemos en el poder de la tecnología para conectar y mejorar vidas.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- En sobre-nosotros.html, después de .values -->
+<section class="testimonials-section">
+    <div class="container">
+        <h2 class="content-level-2">Lo que dicen nuestros clientes</h2>
+        <p class="content-level-3">Experiencias reales de quienes confían en nosotros</p>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "Compré mi laptop gamer hace 6 meses y funciona perfectamente. 
+                    El soporte postventa fue excelente cuando tuve una duda."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JP</div>
+                    <div class="author-info">
+                        <h4>Juan Pérez</h4>
+                        <p>Cliente desde 2021</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "Los precios son competitivos y la entrega llegó antes de lo esperado. 
+                    Definitivamente volveré a comprar en TechShop."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MG</div>
+                    <div class="author-info">
+                        <h4>María González</h4>
+                        <p>Cliente desde 2022</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "La asesoría que recibí para elegir el smartphone adecuado fue invaluable. 
+                    Se tomaron el tiempo para entender mis necesidades."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">CR</div>
+                    <div class="author-info">
+                        <h4>Carlos Rodríguez</h4>
+                        <p>Cliente desde 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline histórico -->
+<section class="timeline-section">
+    <div class="container">
+        <h2 class="content-level-2">Nuestra historia en el tiempo</h2>
+        <p class="content-level-3">Hitos importantes en nuestro crecimiento</p>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-content">
+                    <h4>Fundación de TechShop</h4>
+                    <p>Nacimos con la visión de hacer la tecnología accesible para todos en México.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2021</div>
+                <div class="timeline-content">
+                    <h4>Primeros 1,000 clientes</h4>
+                    <p>Alcanzamos nuestro primer hito importante gracias a la confianza de nuestros clientes.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2022</div>
+                <div class="timeline-content">
+                    <h4>Expansión nacional</h4>
+                    <p>Implementamos envíos a toda la República Mexicana y duplicamos nuestro catálogo.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2023</div>
+                <div class="timeline-content">
+                    <h4>Lanzamiento de app móvil</h4>
+                    <p>Desarrollamos nuestra aplicación para iOS y Android, mejorando la experiencia móvil.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2024</div>
+                <div class="timeline-content">
+                    <h4>10,000+ clientes satisfechos</h4>
+                    <p>Superamos los 10,000 clientes y mantenemos una calificación de 4.5 estrellas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        </div>
+    </section>
+
+    <!-- Footer (mismo que index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TechShop</h3>
+                    <p>Tecnología accesible para todos. Los mejores productos a los mejores precios desde 2020.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="ayuda.html">Ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> soporte@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +52 695-456-9631</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechShop. Todos los derechos reservados.</p>
+            </div>
+        </div>
+        <!-- En sobre-nosotros.html, antes del cierre del footer -->
+<div class="certifications">
+    <h4 class="content-level-3">Certificaciones y asociaciones</h4>
+    <div class="cert-logos">
+        <div class="cert-logo">
+            <i class="fas fa-lock"></i>
+            <span>SSL Seguro</span>
+        </div>
+        <div class="cert-logo">
+            <i class="fas fa-shield-alt"></i>
+            <span>AMVO</span>
+        </div>
+        <div class="cert-logo">
+            <i class="fas fa-check-circle"></i>
+            <span>Proceso Seguro</span>
+        </div>
+    </div>
+</div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
