@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop - Inicio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra superior con botón hamburguesa -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="menu-toggle sidebar-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <a href="index.html">Tech<span>Shop</span></a>
+                </div>
+            </div>
+
+            <div class="nav-center" style="position:relative;">
+                <div class="search-box">
+                    <button class="btn-search"><i class="fas fa-search"></i></button>
+                    <input type="text" id="search-input" placeholder="Buscar productos...">
+                    <button class="filter-toggle" aria-label="Filtros"><i class="fas fa-filter"></i></button>
+                </div>
+
+                <div class="filter-panel" role="dialog" aria-hidden="true">
+                    <div class="filter-row">
+                        <label for="filter-category">Categoría</label>
+                        <select id="filter-category">
+                            <option value="all">Todas</option>
+                            <option value="laptops">Laptops</option>
+                            <option value="smartphones">Smartphones</option>
+                            <option value="audio">Audio</option>
+                            <option value="accesories">Accesorios</option>
+                        </select>
+                    </div>
+                    <div class="filter-row">
+                        <label for="filter-price">Precio máximo</label>
+                        <select id="filter-price">
+                            <option value="all">Cualquier precio</option>
+                            <option value="500">Hasta $500</option>
+                            <option value="1000">Hasta $1,000</option>
+                            <option value="2000">Hasta $2,000</option>
+                        </select>
+                    </div>
+                    <div class="filter-row">
+                        <label for="filter-sort">Ordenar</label>
+                        <select id="filter-sort">
+                            <option value="popular">Más populares</option>
+                            <option value="price-low">Precio: menor a mayor</option>
+                            <option value="price-high">Precio: mayor a menor</option>
+                            <option value="newest">Más recientes</option>
+                        </select>
+                    </div>
+                    <div class="filter-row" style="justify-content:flex-end;">
+                        <button class="page-btn apply-filters">Aplicar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <button class="btn-cart" aria-label="Abrir carrito"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></button>
+                <a class="btn-user" href="login.html"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+    <nav id="breadcrumb" class="breadcrumb" aria-label="breadcrumb"></nav>
+
+    <!-- Sidebar (barra lateral) -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-top">
+            <div class="logo">
+                <a href="index.html">Tech<span>Shop</span></a>
+            </div>
+            <button class="close-sidebar" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </aside>
+
+    <div class="overlay-sidebar" id="overlaySidebar" tabindex="-1"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 style="color: white">Tecnología que transforma tu vida</h1>
+            <p style="color: white" >Los mejores productos tecnológicos a precios increíbles</p>
+            <a href="productos.html" class="btn-hero">Ver Productos</a>
+        </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="products-grid">
+                <div class="product-card" data-category="laptops" data-price="1299.99">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Laptop">
+                    </div>
+                    <div class="product-info">
+                        <h3>Laptop Gamer Pro</h3>
+                        <p>Alto rendimiento para trabajo y juegos</p>
+                        <div class="product-price">$1,299.99</div>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="smartphones" data-price="799.99">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Smartphone">
+                    </div>
+                    <div class="product-info">
+                        <h3>Smartphone X10</h3>
+                        <p>Triple cámara, 128GB de almacenamiento</p>
+                        <div class="product-price">$799.99</div>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="audio" data-price="199.99">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Audífonos">
+                    </div>
+                    <div class="product-info">
+                        <h3>Audífonos Bluetooth</h3>
+                        <p>Cancelación de ruido, 30h de batería</p>
+                        <div class="product-price">$199.99</div>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">4.5</div>
+                <div class="stat-label">Calificación</div>
+                <p class="content-level-3">Basada en 2,500+ reseñas</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Clientes satisfechos</div>
+                <p class="content-level-3">En toda Latinoamérica</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Productos</div>
+                <p class="content-level-3">Tecnología de última generación</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Soporte</div>
+                <p class="content-level-3">Chat, email y teléfono</p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="trust-badges">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Compra 100% segura</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-truck"></i>
+                    <span>Envío a todo México</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-undo"></i>
+                    <span>30 días de devolución</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Hasta 12 MSI</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TechShop</h3>
+                    <p>Tecnología accesible para todos. Los mejores productos a los mejores precios desde 2020.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="ayuda.html">Ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> soporte@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +52 695-456-9631</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechShop. Todos los derechos reservados.</p>
+            </div>
+        </div>
+
+    </footer>
+    
+    <script src="../js/main.js"></script>
+    <script src="../js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop - Centro de Ayuda</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra superior con botón hamburguesa -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="menu-toggle sidebar-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <a href="index.html">Tech<span>Shop</span></a>
+                </div>
+            </div>
+
+            <div class="nav-center" style="position:relative;">
+                <div class="search-box">
+                    <button class="btn-search"><i class="fas fa-search"></i></button>
+                    <input type="text" id="search-input" placeholder="Buscar productos...">
+                    <button class="filter-toggle" aria-label="Filtros"><i class="fas fa-filter"></i></button>
+                </div>
+
+                <div class="filter-panel" role="dialog" aria-hidden="true">
+                    <div class="filter-row">
+                        <label for="filter-category">Categoría</label>
+                        <select id="filter-category">
+                            <option value="all">Todas</option>
+                            <option value="laptops">Laptops</option>
+                            <option value="smartphones">Smartphones</option>
+                            <option value="audio">Audio</option>
+                            <option value="accesories">Accesorios</option>
+                        </select>
+                    </div>
+                    <div class="filter-row">
+                        <label for="filter-price">Precio máximo</label>
+                        <select id="filter-price">
+                            <option value="all">Cualquier precio</option>
+                            <option value="500">Hasta $500</option>
+                            <option value="1000">Hasta $1,000</option>
+                            <option value="2000">Hasta $2,000</option>
+                        </select>
+                    </div>
+                    <div class="filter-row">
+                        <label for="filter-sort">Ordenar</label>
+                        <select id="filter-sort">
+                            <option value="popular">Más populares</option>
+                            <option value="price-low">Precio: menor a mayor</option>
+                            <option value="price-high">Precio: mayor a menor</option>
+                            <option value="newest">Más recientes</option>
+                        </select>
+                    </div>
+                    <div class="filter-row" style="justify-content:flex-end;">
+                        <button class="page-btn apply-filters">Aplicar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <a class="btn-cart" href="productos.html"><i class="fas fa-shopping-cart"></i></a>
+                <a class="btn-user" href="login.html"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+    <nav id="breadcrumb" class="breadcrumb" aria-label="breadcrumb"></nav>
+
+    <!-- Sidebar (barra lateral) -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-top">
+            <div class="logo">
+                <a href="index.html">Tech<span>Shop</span></a>
+            </div>
+            <button class="close-sidebar" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="ayuda.html" class="active">Ayuda</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a class="btn-search" href="#"><i class="fas fa-search"></i></a>
+            <a class="btn-cart" href="productos.html"><i class="fas fa-shopping-cart"></i></a>
+            <a class="btn-user" href="login.html"><i class="fas fa-user"></i></a>
+        </div>
+    </aside>
+
+    <div class="overlay-sidebar" id="overlaySidebar" tabindex="-1"></div>
+
+    <!-- Centro de Ayuda -->
+    <section class="help-center">
+        <div class="container">
+            <h1 class="page-title">Centro de ayuda</h1>
+            <p class="page-subtitle">¿En qué te podemos ayudar hoy?</p>
+            
+            <div class="help-options">
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p class="help-contact">soporte@gmail.com</p>
+                    <p class="help-desc">Respuesta las 24 horas</p>
+                    <button class="btn-help" data-contact="email">Enviar Email</button>
+                </div>
+                
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Teléfono</h3>
+                    <p class="help-contact">+52 695-456-9631</p>
+                    <p class="help-desc">Lun - Vie: 9:00 - 19:00</p>
+                    <button class="btn-help" data-contact="phone">Llamar Ahora</button>
+                </div>
+                
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Chat en Vivo</h3>
+                    <p class="help-contact">Iniciar Chat</p>
+                    <p class="help-desc">Disponible 24/7</p>
+                    <button class="btn-help" data-contact="chat">Iniciar Chat</button>
+                </div>
+            </div>
+
+            <!-- Preguntas Frecuentes -->
+            <div class="faq-section">
+                <h2>Preguntas Frecuentes</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Cuál es el tiempo de entrega?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>El tiempo de entrega varía según tu ubicación. Generalmente es de 3-5 días hábiles para envíos nacionales y 7-14 días para envíos internacionales.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Cómo puedo realizar una devolución?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Puedes iniciar el proceso de devolución desde tu cuenta en nuestro sitio web dentro de los 30 días posteriores a la compra. El producto debe estar en su estado original.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>¿Qué métodos de pago aceptan?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Aceptamos tarjetas de crédito/débito (Visa, MasterCard, American Express), PayPal y transferencias bancarias en algunos países.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (mismo que index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TechShop</h3>
+                    <p>Tecnología accesible para todos. Los mejores productos a los mejores precios desde 2020.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="ayuda.html">Ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> soporte@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +52 695-456-9631</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechShop. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
